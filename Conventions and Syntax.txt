@@ -1,0 +1,20 @@
+Coding Syntax is the structure of the language (in our case it's C#).
+Conventions are tools to write code.
+
+The dot ( . ) is used to seperate words within lines of code that are connected:
+example: Systems.Collections.Generic
+
+The semicolon is used to end a line of code within a body or function
+example: print("Hello");
+
+To make a comment the computer will not read use // for a single line
+example: //this won't be in the output of the code
+or /* (text) */ for a multiple line comment
+example: /*this is a long comment
+	with a lot of lines
+	See? */
+
+Curly braces {} are used for functions (tells what to do) to open and close the funciton.
+example: void Start () {
+		print("Hello");
+	}
