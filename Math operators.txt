@@ -1,0 +1,10 @@
+Math Operators
+currently the assignment link thingy isn't working so I'm just gonna
+write what I know about C# math until that comes back up.
+
++ addition
+- subtraction
+* multiplication
+/ division
+= assigns value (not necessarily equals)
+
