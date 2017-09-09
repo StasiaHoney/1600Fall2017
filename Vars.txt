@@ -1,0 +1,23 @@
+Variables:
+
+A variable is storage for data.
+
+Some variables types are:
+
+Integer (int)
+int MyInt = 5;
+
+Floating point number (float)
+public float health = 100;
+
+Double- precise version of float (double)
+double x = 5.34;
+
+Character (char)
+char y = 'Z';
+
+Boolean that can only be either True or False (bool)
+bool gravtiy = false;
+
+String- sequence of characters (string)
+string firstName = "Ana";
