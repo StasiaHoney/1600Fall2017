@@ -1,4 +1,6 @@
-﻿public class ifStatements : MonoBehaviour { 
+﻿using UnityEngine;
+using UnityEngine.UI;
+public class ifStatements : MonoBehaviour { 
  
   public Text input;  
   private string password = "Evan_Hansen"; 
