@@ -5,10 +5,9 @@ using UnityEngine.UI;
 
 public class ifStatements : MonoBehaviour {
 
+	public bool canPlayGame = false;
 	public Text input;
-	private string password = "G@m3rG33k";
 	
-	void Update ()
 	{
 		if (input.text == password)
 		{
