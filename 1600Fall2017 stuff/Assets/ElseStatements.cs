@@ -72,7 +72,7 @@ public class ElseStatements : MonoBehaviour {
 			print("Lance");
 		}
 
-		if(GreenLion == Pidge){
+		if(GreenLion == RedLion){
 			print("Katie");
 		}else {
 			print("Other Alien chick");

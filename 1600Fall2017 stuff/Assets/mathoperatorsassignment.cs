@@ -18,6 +18,8 @@ public class mathoperatorsassignment : MonoBehaviour {
 	public float multremainderResult;
 	public float addaddResult;
 	public float subsubResult;
+	int x = 4;
+	int y = 9;
 	// Update is called once per frame
 	void Update () {
 		addResult = num1 + num2; // adding two num
@@ -40,5 +42,7 @@ public class mathoperatorsassignment : MonoBehaviour {
 		multremainderResult = num1 % num3 % num2;
 		addaddResult = addResult + multResult;
 		subsubResult = subResult - multnumsubResult;
+		
+		x = (y%x != 0) ? y/x : y;
 	}
 }
