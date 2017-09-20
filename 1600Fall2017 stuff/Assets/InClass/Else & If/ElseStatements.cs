@@ -9,7 +9,6 @@ public class ElseStatements : MonoBehaviour {
 	public bool Life;
 	public bool Love;
 	public Text input;
-	private string password = "Dear_Evan_Hansen";
 	public float num1;
 	public bool Voltron_Season_4 = false;
 	public bool Galra_Keith;
