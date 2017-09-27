@@ -7,5 +7,9 @@ https://www.gitkraken.com/
 
 Hello World!
 
+<<<<<<< HEAD
 >>>>>>> CharacterScript
+=======
+>>>>>>> master
+>>>>>>> Character
 This class is so so so good!
