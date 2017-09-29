@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MathOperators : MonoBehaviour {
+public class MathOperatorsAssignment : MonoBehaviour {
 
 	// Use this for initialization
 	public float num1;

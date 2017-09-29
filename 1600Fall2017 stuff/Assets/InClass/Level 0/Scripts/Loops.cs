@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Loops : MonoBehaviour {
+public class LoopsAssignment : MonoBehaviour {
 
 	public bool canPlay = true;
 

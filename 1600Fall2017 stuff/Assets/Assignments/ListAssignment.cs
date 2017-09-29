@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-public class Lists : MonoBehaviour {
+public class ListAssignment : MonoBehaviour {
 
 	public List <string> disneyPrincesses = new List<string>();
 	public List<int> Age = new List<int>();
