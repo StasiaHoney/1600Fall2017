@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Lists : MonoBehaviour {
+public class List : MonoBehaviour {
 
 	public List<GameObject> myWeapons;
 	void OnTriggerEnter (Collider _weapon) 
