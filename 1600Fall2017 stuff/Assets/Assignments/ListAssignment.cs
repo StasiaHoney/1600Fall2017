@@ -13,7 +13,14 @@ public class ListAssignment : MonoBehaviour {
 		disneyPrincesses.Insert(2, "Kida");//inserts to specific #
 		disneyPrincesses.Remove("Merida"); //removes from list
 
-		Age.Add(18); 
+		Age.Add(1);
+		Age.Add(9);
+		Age.Insert(1, 5);
+		Age.Add(12);
+		Age.Add(16);
+		Age.Add(18);
+		Age.Add(21);
+		Age.Remove(21);		
 	}
 	
 	
