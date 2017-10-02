@@ -4,10 +4,14 @@ using UnityEngine;
 
 public class WeaponSwitch : MonoBehaviour {
 
-	public string[] weapons;
+	public List<GameObject> myWeapons;
 
+	void OnTriggerEnter(Collider _weapon)
+	{
+		myWeapons.Add(_weapon.gameObject);
+	}
 	public void MyWeaponSwitch (int i){
-		switch (weapons[i])
+		switch (myWeapons[i].name)
 		{
 			case "Missile":
 				print("Missile");
@@ -16,6 +20,10 @@ public class WeaponSwitch : MonoBehaviour {
 			case "Plasma":
 				print("Plasma");
 				break;
+
+			case "RayGun":
+				print("Ray Gun");
+				break;	
 
 			default:
 				print("You have no other weapons.");
