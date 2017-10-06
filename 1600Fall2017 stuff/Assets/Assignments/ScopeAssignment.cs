@@ -21,13 +21,7 @@ public class ScopeAssignment : MonoBehaviour {
 
 		string Ana = "Me"; //I can't leave the box so I can't say hi to Katie
 		Katie = "*Says* Hello";	//but Katie can say hi to me
-
-			void Box() { // new function inside start
-				string Carlton = "My Grumpy Cat Plush";
-				Katie = "Pets Carlton"; // we can both pet the kitty but the kitty can't come say hi to us.
-				Ana = "Pets Carlton";
 			}	
-	}
 	
 	// Update is called once per frame
 	void Update () {

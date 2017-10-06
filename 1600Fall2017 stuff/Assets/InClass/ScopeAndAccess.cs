@@ -15,13 +15,6 @@ public class ScopeAndAccess : MonoBehaviour {
 			//things inside start can't be seen outside box (functions)
 			string thing2 = "Thing 2.";
 			thing1 = "Fun"; //thing1 can go inside box thing2 can't leave box
-
-		void Box2 (){ //you can have functions inside of functions
-			string foxInBox = "Our Game is done Sir, thank you for a lot of fun, Sir.";
-			print(thing2);
-		}		
-
-		Box2 ();
 	}
 
 	void NewBox (){
