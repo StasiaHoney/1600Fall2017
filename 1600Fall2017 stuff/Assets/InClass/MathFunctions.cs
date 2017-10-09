@@ -55,9 +55,33 @@ public class MathFunctions : MonoBehaviour {
 		}
 	}
 
-	public void Play(string character, int Health){ //the vars inside the () are called arugments, you can have up to four
-		//inside void functions you can do all sorts of things with loops and things like this.
-		print(this.name + character + " has " + Health + "% Health"); //ouput ie. Ellie has 100% health
+	public int crouch;
+	int ReturnCrouch (int _grab){
+		if(_grab <= 50 ){
+			return 0;
+		} else {
+			return 100;
+		}
+	}
+
+	string ReturnRoommate (string _Katie){
+		if(_Katie == "Nice"){
+			return "Happy";
+		} else {
+			return "Grumpy";
+		}
+	}
+
+	public string [] NarniaRoyalty = {"Peter", "Susan", "Edmund", "Lucy"}; 
+	public void Narnia (string Royalty){
+		print(this.name + NarniaRoyalty + "is Narnian Royalty");
+	}
+
+	public void Play(string character, int Health){
+		print(this.name + character + " has " + Health + "% Health"); 
+	}
+	public void Plushie (string animal, string race){
+		print(this.name + animal + " is a " + race);
 	}
 	
 }
