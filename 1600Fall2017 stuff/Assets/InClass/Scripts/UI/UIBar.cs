@@ -5,8 +5,9 @@ using UnityEngine.UI;
 
 public class UIBar : MonoBehaviour {
 
+	public GameObject gameOverUI;
+	public static bool gameOver;
 	public Image bar;
-	public float barTime = 0.1f;
 	public float ammountToAdd = 0.1f;
 	public float powerLevel = 0.01f;
 
@@ -32,21 +33,32 @@ public class UIBar : MonoBehaviour {
 	}
 
 	IEnumerator PowerUpBar () {
-		while (bar.fillAmount < 1)
+		float tempAmmount = bar.fillAmount + powerLevel;
+		if (tempAmmount > 1){
+			tempAmmount = 1;
+		}
+		while (bar.fillAmount < tempAmmount)
 		{
 			bar.fillAmount += ammountToAdd;
-			yield return new WaitForSeconds(barTime);
+			yield return new WaitForSeconds(ammountToAdd);
+			
 		}
 	}
 
 	IEnumerator PowerDownBar () {
-		float tempAmmount = powerLevel;
-		float fillAmount = bar.fillAmount;
-		while (tempAmmount > 0)
+		float tempAmmount = bar.fillAmount - powerLevel;
+		if(tempAmmount <= 0){
+			tempAmmount = 0;
+		}
+		while (bar.fillAmount > tempAmmount)
 		{
-			fillAmount = tempAmmount - ammountToAdd;
-			bar.fillAmount = fillAmount;
-			yield return new WaitForSeconds(barTime);
+			bar.fillAmount -= ammountToAdd;
+			yield return new WaitForSeconds(ammountToAdd);
+		}
+		
+		if(bar.fillAmount == 0){
+			gameOverUI.SetActive(true);
+			CharacterControl.gameOver = true;
 		}
 	}
 }
