@@ -4,11 +4,10 @@ using UnityEngine;
 using UnityEngine.AI;
 
 public class NavMeshAI : MonoBehaviour {
-
-
-	public Transform player;
+public Transform player;
 	public NavMeshAgent agent;
-	
+
+	// Update is called once per frame
 	void Update () {
 		agent.destination = player.position;
 	}

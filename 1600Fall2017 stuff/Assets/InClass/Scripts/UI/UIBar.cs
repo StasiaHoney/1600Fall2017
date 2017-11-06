@@ -7,6 +7,7 @@ public class UIBar : MonoBehaviour {
 
 	public Image bar;
 	public Text coinNum;
+	public Text EndGameText;
 	public int totalCoinValue;
 	public int coinValue = 30;
 	public GameObject gameOverUI;
@@ -18,7 +19,8 @@ public class UIBar : MonoBehaviour {
 	{
 		PowerUp,
 		PowerDown,
-		CollectCoin
+		CollectCoin,
+		Win
 	}
 
 	public PowerUpType powerUp;
@@ -37,6 +39,10 @@ public class UIBar : MonoBehaviour {
 			case PowerUpType.CollectCoin:
 			//start the coroutine "CollectCoin"
 				StartCoroutine (CollectCoin());
+			break;
+
+			case PowerUpType.Win:
+				EndGame("You Win!");
 			break;
 		}
 	}
@@ -76,9 +82,15 @@ public class UIBar : MonoBehaviour {
 			yield return new WaitForSeconds(ammountToAdd);
 		}
 		
-		if(bar.fillAmount == 0){
-			gameOverUI.SetActive(true);
-			CharacterControl.gameOver = true;
+		if(bar.fillAmount == 0)
+		{
+			EndGame("Game Over");
 		}
+	}
+	void EndGame (string _text)
+	{
+		EndGameText.text = _text;
+		gameOverUI.SetActive(true);
+		CharacterControl.gameOver = true;
 	}
 }
