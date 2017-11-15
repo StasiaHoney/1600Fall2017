@@ -14,13 +14,17 @@ public class UIBar : MonoBehaviour {
 	public static bool gameOver;
 	public float ammountToAdd = 0.1f;
 	public float powerLevel = 0.01f;
+	public float plusSpeed = 10;
+	public float speed;
 
 	public enum PowerUpType
 	{
 		PowerUp,
 		PowerDown,
+		Jump,
 		CollectCoin,
-		Win
+		Win,
+		Speed
 	}
 
 	public PowerUpType powerUp;
@@ -37,12 +41,15 @@ public class UIBar : MonoBehaviour {
 			break;
 
 			case PowerUpType.CollectCoin:
-			//start the coroutine "CollectCoin"
 				StartCoroutine (CollectCoin());
 			break;
 
 			case PowerUpType.Win:
 				EndGame("You Win!");
+			break;
+
+			case PowerUpType.Speed:
+				StartCoroutine (SpeedPickup());
 			break;
 		}
 	}
@@ -57,6 +64,10 @@ public class UIBar : MonoBehaviour {
 		}
 	}
 
+	IEnumerator SpeedPickup ()
+	{
+		
+	}
 
 	IEnumerator PowerUpBar () {
 		float tempAmmount = bar.fillAmount + powerLevel;
