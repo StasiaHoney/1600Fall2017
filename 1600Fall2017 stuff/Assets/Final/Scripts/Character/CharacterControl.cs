@@ -8,7 +8,6 @@ public class CharacterControl : MonoBehaviour {
 	public static bool gameOver = false;
 	public float gravity = 9.81f;
 	public float speed = 10;
-	private float speedup = 1.0f;
 	public Vector3 moveVector3;
 	public float jumpForce = 20;
 	void Update () {
