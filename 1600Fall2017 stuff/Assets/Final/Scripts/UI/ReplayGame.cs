@@ -10,6 +10,7 @@ public class ReplayGame : MonoBehaviour {
 	public GameObject GameOverUI;
 	public static Vector3 startPosition;
 	private float fillAmount;
+	
 
 	void Awake ()
 	{

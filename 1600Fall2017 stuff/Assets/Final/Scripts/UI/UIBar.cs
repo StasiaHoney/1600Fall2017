@@ -16,6 +16,7 @@ public class UIBar : MonoBehaviour {
 	public float powerLevel = 0.01f;
 	public float plusSpeed = 10;
 	public float speed;
+	private Vector3 moveVector;
 
 	public enum PowerUpType
 	{
@@ -66,7 +67,7 @@ public class UIBar : MonoBehaviour {
 
 	IEnumerator SpeedPickup ()
 	{
-		
+		return null;
 	}
 
 	IEnumerator PowerUpBar () {
@@ -94,6 +95,11 @@ public class UIBar : MonoBehaviour {
 		}
 		
 		if(bar.fillAmount == 0)
+		{
+			EndGame("Game Over");
+		}
+
+		if(moveVector.y <= -1)
 		{
 			EndGame("Game Over");
 		}
