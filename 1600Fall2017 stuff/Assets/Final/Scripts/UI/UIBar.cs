@@ -101,7 +101,7 @@ public class UIBar : MonoBehaviour {
 
 		if(moveVector.y <= -1)
 		{
-			EndGame("Game Over");
+			EndGame("Replay");
 		}
 	}
 	void EndGame (string _text)
