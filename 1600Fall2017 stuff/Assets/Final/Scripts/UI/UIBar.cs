@@ -14,8 +14,9 @@ public class UIBar : MonoBehaviour {
 	public static bool gameOver;
 	public float ammountToAdd = 0.1f;
 	public float powerLevel = 0.01f;
+	public CharacterControl character;
 	public float plusSpeed = 10;
-	public float speed;
+	public float plusJump = 30;
 	private Vector3 moveVector;
 
 	public enum PowerUpType
@@ -52,6 +53,10 @@ public class UIBar : MonoBehaviour {
 			case PowerUpType.Speed:
 				StartCoroutine (SpeedPickup());
 			break;
+
+			case PowerUpType.Jump:
+				StartCoroutine (JumpPickup());
+			break;
 		}
 	}
 	IEnumerator CollectCoin () {
@@ -67,7 +72,14 @@ public class UIBar : MonoBehaviour {
 
 	IEnumerator SpeedPickup ()
 	{
-		return null;
+		character.speed += plusSpeed;
+		yield return new WaitForSeconds(0.1f);
+	}
+
+	IEnumerator JumpPickup ()
+	{
+		character.jumpForce += plusJump;
+		yield return new WaitForSeconds(0.1f);
 	}
 
 	IEnumerator PowerUpBar () {
