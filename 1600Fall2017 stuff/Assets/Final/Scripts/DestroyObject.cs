@@ -4,10 +4,9 @@ using UnityEngine;
 
 public class DestroyObject : MonoBehaviour {
 
+	public GameObject powerup;
  	void OnTriggerEnter()
 	{
-		if(gameObject){
-			Destroy(gameObject);
-		}
+		powerup.SetActive (false);
 	}
 }

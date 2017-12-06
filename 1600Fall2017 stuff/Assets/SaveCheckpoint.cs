@@ -15,13 +15,4 @@ public class SaveCheckpoint : MonoBehaviour {
 			PlayerPrefs.SetFloat(playerPrefsTitles[i], checkPoint[i]);
 		}			
 	}
-
-	void Start()
-	{
-		Player.position = checkPoint;
-		for (int i = 0; i < playerPrefsTitles.Length; i++)
-		{
-			checkPoint[i] = PlayerPrefs.GetFloat(playerPrefsTitles[i]);
-		}		
-	}
 }
