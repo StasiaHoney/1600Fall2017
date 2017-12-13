@@ -15,6 +15,10 @@ public class ReplayGame : MonoBehaviour {
 	public DestroyObject active2;
 	public DestroyObject active3;
 	public DestroyObject active4;
+	public DestroyObject active5;
+	public DestroyObject active6;
+	public DestroyObject active7;
+	public DestroyObject active8;
 	
 
 	void Awake ()
@@ -38,5 +42,9 @@ public class ReplayGame : MonoBehaviour {
 		active2.powerup.SetActive(true);
 		active3.powerup.SetActive(true);
 		active4.powerup.SetActive(true);
+		active5.powerup.SetActive(true);
+		active6.powerup.SetActive(true);
+		active7.powerup.SetActive(true);
+		active8.powerup.SetActive(true);
 	}
 }
