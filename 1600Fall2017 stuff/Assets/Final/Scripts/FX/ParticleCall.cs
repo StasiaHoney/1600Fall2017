@@ -8,6 +8,6 @@ public class ParticleCall : MonoBehaviour {
 	
 	void OnTriggerEnter()
 	{
-		win.Emit(10000);
+		win.Emit(100);
 	}
 }
