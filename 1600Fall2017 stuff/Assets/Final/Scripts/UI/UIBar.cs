@@ -80,6 +80,7 @@ public class UIBar : MonoBehaviour {
 	{
 		character.jumpForce += plusJump;
 		yield return new WaitForSeconds(0.1f);
+		
 	}
 
 	IEnumerator PowerUpBar () {
